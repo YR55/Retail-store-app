@@ -1,0 +1,71 @@
+replicaCount: 1
+
+image:
+  repository: yogeshverma08/retail-store-cart
+  pullPolicy: Always
+  tag: "5d27930-16"
+
+imagePullSecrets:
+  - name: regcred
+
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext:
+  fsGroup: 1000
+
+securityContext:
+  capabilities:
+    drop:
+      - ALL
+  readOnlyRootFilesystem: true
+  runAsNonRoot: true
+  runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources:
+  limits:
+    memory: 512Mi
+  requests:
+    cpu: 256m
+    memory: 512Mi
+
+autoscaling:
+  enabled: false
+
+metrics:
+  enabled: true
+
+configMap:
+  create: true
+  name: ""
+
+app:
+  persistence:
+    provider: in-memory
+    dynamodb:
+      tableName: Items
+      createTable: false
+
+dynamodb:
+  create: false
+
+securityGroups:
+  create: false
+  securityGroupIds: []
+
+opentelemetry:
+  enabled: false
+
+podDisruptionBudget:
+  enabled: false

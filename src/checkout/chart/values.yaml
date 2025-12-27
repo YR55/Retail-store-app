@@ -1,0 +1,72 @@
+replicaCount: 1
+
+image:
+  repository: yogeshverma08/retail-store-checkout
+  pullPolicy: Always
+  tag: "5d27930-16"
+
+imagePullSecrets:
+  - name: regcred
+
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext:
+  fsGroup: 1000
+
+securityContext:
+  capabilities:
+    drop:
+      - ALL
+  readOnlyRootFilesystem: true
+  runAsNonRoot: true
+  runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources:
+  limits:
+    memory: 256Mi
+  requests:
+    cpu: 128m
+    memory: 256Mi
+
+autoscaling:
+  enabled: false
+
+metrics:
+  enabled: true
+
+configMap:
+  create: true
+  name: ""
+
+app:
+  persistence:
+    provider: in-memory
+    redis:
+      endpoint: ""
+  endpoints:
+    orders: http://retail-store-orders:80
+
+redis:
+  create: false
+
+securityGroups:
+  create: false
+  securityGroupIds: []
+
+opentelemetry:
+  enabled: false
+
+podDisruptionBudget:
+  enabled: false

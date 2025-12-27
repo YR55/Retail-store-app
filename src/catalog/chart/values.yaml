@@ -1,0 +1,75 @@
+replicaCount: 1
+
+image:
+  repository: yogeshverma08/retail-store-catalog
+  pullPolicy: Always
+  tag: "76d31e7-18"
+
+imagePullSecrets:
+  - name: regcred
+
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext:
+  fsGroup: 1000
+
+securityContext:
+  capabilities:
+    drop:
+      - ALL
+  readOnlyRootFilesystem: true
+  runAsNonRoot: true
+  runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources:
+  limits:
+    memory: 256Mi
+  requests:
+    cpu: 256m
+    memory: 256Mi
+
+autoscaling:
+  enabled: false
+
+metrics:
+  enabled: true
+
+configMap:
+  create: true
+  name: ""
+
+app:
+  persistence:
+    provider: in-memory
+    endpoint: ""
+    database: catalog
+    secret:
+      create: true
+      name: catalog-db
+      username: catalog
+      password: ""
+
+mysql:
+  create: false
+
+securityGroups:
+  create: false
+  securityGroupIds: []
+
+opentelemetry:
+  enabled: false
+
+podDisruptionBudget:
+  enabled: false
