@@ -14,17 +14,13 @@ terraform {
       source  = "hashicorp/helm"
       version = ">= 2.0"
     }
-    kubernetes = {
-      source  = "hashicorp/kubernetes"
-      version = ">= 2.0"
+    kubectl = {
+      source  = "gavinbunney/kubectl"
+      version = ">= 1.14"
     }
     time = {
       source  = "hashicorp/time"
       version = ">= 0.9"
-    }
-    null = {
-      source  = "hashicorp/null"
-      version = ">= 3.0"
     }
     random = {
       source  = "hashicorp/random"
@@ -53,7 +49,7 @@ provider "helm" {
   }
 }
 
-provider "kubernetes" {
+provider "kubectl" {
   host                   = module.retail_app_eks.cluster_endpoint
   cluster_ca_certificate = base64decode(module.retail_app_eks.cluster_certificate_authority_data)
   exec {

@@ -9,7 +9,7 @@ spec:
   project: retail-store
   source:
     repoURL: https://github.com/YR55/retail-store-sample-app.git
-    targetRevision: gitops
+    targetRevision: main
     path: src/ui/chart
     helm:
       valueFiles:

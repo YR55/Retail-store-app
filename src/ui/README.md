@@ -1,8 +1,6 @@
-# AWS Containers Retail Sample - UI Service
+@## AWS Containers Retail Sample - UI Service!
 
 <!-- GitOps Test: Testing deploy-simple.yml workflow -->
-
-<!-- Test commit -->
 
 | Language | Persistence |
 | -------- | ----------- |
@@ -10,7 +8,7 @@
 
 This service provides the frontend for the retail store, serving the HTML UI and aggregating calls to the backend API components.
 
-## Configuration
+## Configuration!
 
 The following environment variables are available for configuring the service:
 
