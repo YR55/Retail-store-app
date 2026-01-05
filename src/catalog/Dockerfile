@@ -50,8 +50,6 @@ USER appuser
 
 COPY --chown=appuser:appuser --from=build-env /appsrc/main /app/
 
-COPY ./ATTRIBUTION.md ./LICENSES.md
-
 ENV GIN_MODE=release
 
 ENTRYPOINT ["/app/main"]
