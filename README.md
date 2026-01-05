@@ -144,7 +144,7 @@ This section contains screenshots from the **actual running system**, covering b
 
 ---
 
-> 📌 These placeholders will be replaced with **real screenshots** from the live system to demonstrate actual deployment and operational status.
+> 📌 *(These screenshots represent the actual running system, not a mock or sample setup.)*
 
 ---
 
