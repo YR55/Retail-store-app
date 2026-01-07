@@ -134,13 +134,38 @@ This section contains screenshots from the **actual running system**, covering b
 
 ---
 
-### 🔹 ArgoCD Application Deployment
-![ArgoCD Deployment](./Assets/argocd-deployment.png)
+### 🔹 ArgoCD – Application Overview (Top-Level)
+![ArgoCD Overview](./Assets/argocd-overview.png)
 
 ---
 
-### 🔹 Runtime Application State
-![Runtime State](./Assets/runtime-state.png)
+### 🔹 ArgoCD – Cart Service
+![Cart Service](./Assets/argocd-cart.png)
+
+---
+
+### 🔹 ArgoCD – Catalog Service
+![Catalog Service](./Assets/argocd-catalog.png)
+
+---
+
+### 🔹 ArgoCD – Orders Service
+![Orders Service](./Assets/argocd-orders.png)
+
+---
+
+### 🔹 ArgoCD – Checkout Service
+![Checkout Service](./Assets/argocd-checkout.png)
+
+---
+
+### 🔹 ArgoCD – UI Service
+![UI Service](./Assets/argocd-ui.png)
+
+---
+
+### 🔹 Monitoring & Observability (Prometheus / Grafana)
+![Monitoring](./Assets/monitoring.png)
 
 ---
 
