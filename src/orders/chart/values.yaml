@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: yogeshverma08/retail-store-orders
   pullPolicy: Always
-  tag: "43a6d1d-13"
+  tag: "e77de79-15"
 
 imagePullSecrets:
   - name: regcred
