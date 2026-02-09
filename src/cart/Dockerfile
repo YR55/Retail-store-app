@@ -1,5 +1,5 @@
 # ==========================
-# Build Stage!
+# Build Stage
 # =========================
 FROM public.ecr.aws/amazonlinux/amazonlinux:2023 AS build
 
